@@ -1,0 +1,28 @@
+{
+    "name": "neubauer/login_info",
+    "type": "roundcube-plugin",
+    "description": "Plugin to set custom information on the login entry screen.",
+    "license": "GNU GPLv3+",
+    "authors": [
+        {
+            "name": "Markus Neubauer",
+            "email": "mn-rc-plugin@std-service.com",
+            "role": "Lead"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://plugins.roundcube.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.1",
+        "roundcube/plugin-installer": ">=0.1.2"
+    },
+    "extra": {
+    "roundcube": {
+      "min-version": "1.0"
+    }
+  }
+}
