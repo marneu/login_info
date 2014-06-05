@@ -1,13 +1,15 @@
 {
-    "name": "neubauer/login_info",
+    "name": "marneu/login_info",
     "type": "roundcube-plugin",
     "description": "Plugin to set custom information on the login entry screen.",
-    "license": "GNU GPLv3+",
+    "keywords": ["login","info"],
+    "license": "GNU GPL-3.0+",
     "authors": [
         {
             "name": "Markus Neubauer",
             "email": "mn-rc-plugin@std-service.com",
-            "role": "Lead"
+            "homepage":"http://github.com/marneu/login_info",
+            "role": "Develovper"
         }
     ],
     "repositories": [
