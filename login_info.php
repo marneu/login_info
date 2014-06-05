@@ -24,12 +24,15 @@ class login_info extends rcube_plugin
         {
                 $this->rcmail = rcube::get_instance();
                 $this->load_config();
+                $this->add_texts ('localization', false);
                 $this->add_hook('template_object_loginform', array($this, 'add_login_info'));
         }
 
         public function add_login_info($arg)
         {
-                if ( $rcmail->config->get('login_info') ) 
+                if ( $this->gettext('custom_login_info') )
+                        $rcmail->output->add_footer( $this->gettext('custom_login_info') )
+                elseif ( $rcmail->config->get('login_info') ) 
                         $rcmail->output->add_footer( $rcmail->config->get('login_info') );
 
                 return $arg;
