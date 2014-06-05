@@ -18,7 +18,7 @@ class login_info extends rcube_plugin
     public $noajax = true;
     // skip frames
     public $noframe = true;
-    private $rcmail;
+    private $addstr = '';
                         
         function init()
         {
@@ -30,10 +30,12 @@ class login_info extends rcube_plugin
 
         public function add_login_info($arg)
         {
-                if ( $this->gettext('custom_login_info') )
-                        $rcmail->output->add_footer( $this->gettext('custom_login_info') )
+                if ( $this->gettext('custom_login_info') ) {
+                        $addstr = $this->gettext('custom_login_info');
+                }
                 elseif ( $rcmail->config->get('login_info') ) 
-                        $rcmail->output->add_footer( $rcmail->config->get('login_info') );
+                        $addstr = $rcmail->config->get('login_info');
+                rcmail::get_instance()->output->add_footer( $addstr );
 
                 return $arg;
         }
