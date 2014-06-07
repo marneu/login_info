@@ -2,7 +2,7 @@
     "name": "marneu/login_info",
     "type": "roundcube-plugin",
     "description": "Plugin to set custom information on the login entry screen.",
-    "keywords": ["login","info"],
+    "keywords": ["customize","login","info"],
     "license": "GNU GPL-3.0+",
     "authors": [
         {
