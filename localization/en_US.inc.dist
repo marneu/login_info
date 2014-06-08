@@ -1,0 +1,9 @@
+<?php
+
+// find a more complex example in de_DE.inc.dist
+
+$labels = array ();
+$labels['custom_login_info'] = 'localized login information from localization/en_US.inc not set up.';
+$labels['custom_login_bottomline'] = 'localized bottom information from localization/en_US.inc not set up.';
+
+?>
