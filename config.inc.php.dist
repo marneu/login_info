@@ -4,7 +4,7 @@
    http://www.std-soft.com/index.php/hm-service/81-c-std-service-code/2-text-auf-der-login-seite-einblenden
 */
 
-// put your message between the two EOT tags
+// put your message in here
 //$rcmail_config['custom_login_info'] = '<img style="align:center;" src="plugins/login_info/images/plugin_login_info.png" /><br /><p style="margin-left:auto;margin-right:auto;width:510px;border-radius:10px;padding:10px;background-color:lightgrey;text-align:center;color:red;"><br />Aus Sicherheitsgründen ist hier nur ein https (gesicherter) Zugang möglich.<br />Sollte Ihr Browser <b>vorher</b> einen Fehler oder eine Warnung angezeigt haben,<br />klicken Sie bitte einmal vor dem Einloggen auf die zwei folgenden Links und<br />installieren die beiden Zertifikate von <a title="Root Zertifikate von CAcert" href="http://www.cacert.org/index.php?id=3" target="cacert"><img src="plugins/login_info/images/CAcert-ssl-security.png" alt="www.cacert.org" style="vertical-align:text-bottom;border-width:0px;" /></a><br /><br />1. <a href="http://www.cacert.org/certs/root.crt" target="cacert" title="get CAcert root Class 1 PKI Key">CAcert Root Zertifikat (Class 1 PKI Key)</a><br />2. <a href="http://www.cacert.org/certs/class3.crt" target="cacert" title="get CAcert Intermedite Class 3 PKI Key">CAcert Root Zertifikat (Class 3 PKI Key)</a><p>';
 
 // used as bottom line below message
