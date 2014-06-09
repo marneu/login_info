@@ -5,7 +5,7 @@
  *
  * Plugin to add a customized info to the login screen
  *
- * @version 1.3
+ * @version 1.4
  * @author Markus Neubauer
  * @http://www.std-soft.com/index.php/hm-service/81-c-std-service-code/2-text-auf-der-login-seite-einblenden
  * @example: https://www.std-soft.de/webmail (in production)
@@ -19,8 +19,9 @@ class login_info extends rcube_plugin
     // skip frames
     public $noframe = true;
 
-    private $login_info = '';
-    private $bottomline = '';
+    private $login_info_before = false;
+    private $login_info_after = false;
+    private $bottomline = false;
     private $addstr = '';
                         
         function init()
@@ -34,27 +35,29 @@ class login_info extends rcube_plugin
                 $rcmail = rcube::get_instance();
                 $this->load_config();
 
-                // order: 1st config.inc.php then localization
-                if ( $rcmail->config->get('custom_login_info') ) 
-                        $login_info = $rcmail->config->get('custom_login_info');
-                elseif ( $this->gettext('custom_login_info') ) {
-                        $login_info = $this->gettext('custom_login_info');
-                }
-
-                // order: 1st config.inc.php then localization
-                if ( $rcmail->config->get('custom_login_bottomline') ) 
-                        $bottomline = $rcmail->config->get('custom_login_bottomline');
-                elseif ( $this->gettext('custom_login_bottomline') ) {
+                if ( $rcmail->config->get('custom_login_info_localization') ) {
+                        $login_info_before = $this->gettext('custom_login_info_before');
+                        $login_info_after = $this->gettext('custom_login_info_after');
                         $bottomline = $this->gettext('custom_login_bottomline');
+
+                } else {
+                    if ( $rcmail->config->get('custom_login_info_before') ) 
+                        $login_info_before = $rcmail->config->get('custom_login_info_before');
+                    if ( $rcmail->config->get('custom_login_info_after') ) 
+                        $login_info_after = $rcmail->config->get('custom_login_info_after');
+                    if ( $rcmail->config->get('custom_login_bottomline') ) 
+                        $bottomline = $rcmail->config->get('custom_login_bottomline');
                 }
                 
                 // use exitings id's message and bottomline
                 if ( !empty($login_info) || !empty($bottomline) ) {
-                    $addstr = '<script type="text/javascript">';
-                    if (!empty($login_info) ) $addstr .= 'document.getElementById("message").innerHTML = \''.$login_info.'\';';
-                        
-                    if (!empty($bottomline) ) $addstr .= 'document.getElementById("bottomline").innerHTML = \''.$bottomline.'\';';
-                    $addstr .= '</script>';
+                    $addstr  = '<script type="text/javascript">';
+                    $addstr .= "\n".'/* <![CDATA[ */'."\n";
+                    if (!empty($login_info_before) ) $addstr .= 'var login_info_before=\''.$login_info_before.'\';';
+                    if (!empty($login_info_after) ) $addstr .= 'var login_info_after=\''.$login_info_after.'\';';
+                    if (!empty($bottomline) ) $addstr .= 'var bottomline=\''.$bottomline.'\';';
+                    $addstr .= "\n".'/* ]]> */'."\n";
+                    $addstr .= '</script>'."\n".'<script type="text/javascript" src="plugins/login_info/login_info.js"></script>';
                     $rcmail->output->add_footer( $addstr );
                 }
 
