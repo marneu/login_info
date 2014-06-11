@@ -22,7 +22,7 @@ $rcmail_config['custom_login_info_localization'] = false;
 
 // put your message before and/or after the login form
 // set to false if not used
-$rcmail_config['custom_login_info_before'] = '<img style="display:block;margin-left:auto;margin-right:auto;" src="plugins/login_info/images/plugin_login_info.png" />';
+$rcmail_config['custom_login_info_before'] = '<img style="display:block;margin-left:auto;margin-right:auto;" src="plugins/login_info/media/plugin_login_info.png" />';
 $rcmail_config['custom_login_info_after'] = false;
 
 // used as bottom line below message

@@ -3,7 +3,7 @@
 // find a more complex example in de_DE.inc.dist
 
 $labels = array ();
-$labels['custom_login_info_before'] = '<img style="display:block;margin-left:auto;margin-right:auto;" src="plugins/login_info/images/plugin_login_info.png" />';
+$labels['custom_login_info_before'] = '<img style="display:block;margin-left:auto;margin-right:auto;" src="plugins/login_info/media/plugin_login_info.png" />';
 $labels['custom_login_info_after'] = 'localized login information from localization/en_US.inc not set up.';
 $labels['custom_login_bottomline'] = 'localized bottom information from localization/en_US.inc not set up.';
 
