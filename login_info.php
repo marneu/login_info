@@ -50,7 +50,7 @@ class login_info extends rcube_plugin
                 }
                 
                 // use exitings id's message and bottomline
-                if ( !empty($login_info) || !empty($bottomline) ) {
+                if ( !empty($login_info_before) || !empty($login_info_after) || !empty($bottomline) ) {
                     $addstr  = '<script type="text/javascript">';
                     $addstr .= "\n".'/* <![CDATA[ */'."\n";
                     if (!empty($login_info_before) ) $addstr .= 'var login_info_before=\''.$login_info_before.'\';';
