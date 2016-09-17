@@ -1,7 +1,7 @@
 login_info
 ==========
 
-Roundcube Webmail Login Info 1.4
+Roundcube Webmail Login Info 1.5
 
 Plugin to show additional text/info on the login screen.
 
