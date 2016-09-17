@@ -53,9 +53,9 @@ class login_info extends rcube_plugin
                 if ( !empty($login_info_before) || !empty($login_info_after) || !empty($bottomline) ) {
                     $addstr  = '<script type="text/javascript">';
                     $addstr .= "\n".'/* <![CDATA[ */'."\n";
-                    if (!empty($login_info_before) ) $addstr .= 'var login_info_before=\''.$login_info_before.'\';';
-                    if (!empty($login_info_after) ) $addstr .= 'var login_info_after=\''.$login_info_after.'\';';
-                    if (!empty($bottomline) ) $addstr .= 'var bottomline=\''.$bottomline.'\';';
+                    if (!empty($login_info_before) ) $addstr .= 'var login_info_before='.json_encode($login_info_before).';';
+                    if (!empty($login_info_after) ) $addstr .= 'var login_info_after='.json_encode($login_info_after).';';
+                    if (!empty($bottomline) ) $addstr .= 'var bottomline='.json_encode($bottomline).';';
                     $addstr .= "\n".'/* ]]> */'."\n";
                     $addstr .= '</script>'."\n".'<script type="text/javascript" src="plugins/login_info/login_info.js"></script>';
                     $rcmail->output->add_footer( $addstr );
