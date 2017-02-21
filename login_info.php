@@ -50,7 +50,7 @@ class login_info extends rcube_plugin
                         $bottomline = $rcmail->config->get('custom_login_bottomline');
                 }
                 
-                // use exitings id's message and bottomline
+                // use existing id's message and bottomline
                 if ( !empty($login_info_before) || !empty($login_info_after) || !empty($bottomline) ) {
                     $addstr  = '<script type="text/javascript">';
                     $addstr .= "\n".'/* <![CDATA[ */'."\n";
