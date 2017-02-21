@@ -3,7 +3,7 @@ login_info
 
 Roundcube Webmail Login Info 1.5.1
 
-Plugin to show additional text/info on the login screen.
+Plugin to show additional customized text/info on the login screen.
 
 Download and install via http://plugins.roundcube.net
 
