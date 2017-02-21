@@ -4,7 +4,7 @@
     "description": "Plugin to set custom information on the login entry screen.",
     "keywords": ["customize","login","info"],
     "license": "GNU GPLv3+",
-    "version": "1.4",
+    "version": "1.5.1",
     "authors": [
         {
             "name": "Markus Neubauer",
