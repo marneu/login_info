@@ -4,7 +4,7 @@
  *
  * Jscript (jquery) for login_info plugin to add a customized info to the login screen
  *
- * @version 1.4.1
+ * @version 1.5.1
  * @author Markus Neubauer
  * @http://www.std-soft.com/index.php/hm-service/81-c-std-service-code/2-text-auf-der-login-seite-einblenden
  * @example: https://www.std-soft.de/webmail (in production)
