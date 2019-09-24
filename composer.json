@@ -3,7 +3,7 @@
     "type": "roundcube-plugin",
     "description": "Plugin to set custom information on the login entry screen.",
     "keywords": ["customize","login","info"],
-    "license": "GNU GPLv3+",
+    "license": "GPLv3+",
     "version": "1.5.1",
     "authors": [
         {
