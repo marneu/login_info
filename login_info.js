@@ -34,5 +34,11 @@ if ( 'undefined' !== typeof bottomline && bottomline !== null ) {
         $('#login-bottomline').html(bottomline);
       });
   }
+  // elastic
+  if ( document.getElementById('login-footer') ) {
+     $(document).ready(function() {
+       $('#login-footer').html(bottomline);
+     });
+ }
 }
 
